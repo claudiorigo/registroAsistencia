@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Claudio Rigollet",
+      "email": "claudiorigo@gmail.com",
+      "password": "123456",
+      "horario": "Vespertino",
+      "sede": "Viña del Mar",
+      "telefono": "+569 5422 5035",
+      "seccion": "V002"
+    },
+    {
+      "id": 2,
+      "nombre": "Test 1",
+      "email": "test1@gmail.com",
+      "telefono": "+569 5422 5035",
+      "password": "123456",
+      "horario": "Vespertino",
+      "sede": "Viña del Mar",
+      "seccion": "V002"
+    },
+    {
+      "id": 3,
+      "nombre": "Test 3",
+      "email": "test3@gmail.com",
+      "telefono": "+569 5422 5035",
+      "password": "123456",
+      "horario": "Vespertino",
+      "sede": "Viña del Mar",
+      "seccion": "V002"
+    },
+    {
+      "id": 4,
+      "nombre": "Test 4",
+      "email": "test4@gmail.com",
+      "telefono": "+569 5422 5035",
+      "password": "123456",
+      "horario": "Vespertino",
+      "sede": "Viña del Mar",
+      "seccion": "V002"
+    },
+    {
+      "id": 5,
+      "nombre": "Test 5",
+      "email": "test5@gmail.com",
+      "password": "123456",
+      "horario": "Vespertino",
+      "sede": "Valparaiso",
+      "telefono": "+569 5374 8810",
+      "seccion": "V003"
+    }
+  ],
+  "asistencia": [
+    {
+      "id": 1,
+      "fecha": "30-10-2021",
+      "asiste": true
+    },
+    {
+      "id": 5,
+      "fecha": "30-10-2021",
+      "asiste": true
+    }
+  ]
+}

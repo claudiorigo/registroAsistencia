@@ -1,0 +1,59 @@
+* Crear proyecto en ionic con angular
+> ionic start registroAsistencia tabs
+> Angular
+* Crear carpeta de Login
+> ionic g page pages/login
+* app.module.ts se agrega el servicio HttpClientModule y se agrega a import
+* Crear un servicio para usuario
+> ionic g s services/usuario
+* Iniciar el API rest para consumir los datos del json
+> npm i -g json-server
+* Inicializare servicio de server json
+json-server --watch basedato.json
+------------------------------------------------------------
+* Agregar Storage al proyecto
+> npm i @ionic/storage
+> npm i @ionic/storage-angular
+------------------------------------------------------------
+* Para guardar los datos de Usuario Service al Storage
+> ionic g s services/base-dato-storage
+* Para cerntralizar los mensajes o errores
+> ionic g s services/alert
+* Crear pagina de inicio
+> ionic g page pages/inicio
+* Crear pagina para restablecer password
+> ionic g page pages/restablecer
+* Navegar por link
+[routerLink]="['/tabs/tab1']"
+* Instalar ionic Native para leer QR y codeBar
+> npm install @ionic-native/core
+* Instalacion de Barcode Scanner
+> npm install phonegap-plugin-barcodescanner
+> npm install @ionic-native/barcode-scanner
+> ionic cap sync
+* Leer código QR desde el dispositivo móvil con android
+> npm install @ionic-native/camera
+> ionic capacitor add android
+> ionic capacitor copy android
+* Se genera guardado de Token al login con el correo
+* Crear Guard para usuario, restringin entrada por token
+> ionic g guard guards/usuario
+* Crear page para el manejo del menú
+> ionic g page pages/menu
+* Crear pagina para Tab3 y muestre el detalle
+
+* Probar con emulador
+> ionic capacitor copy android
+> ionic capacitor build android
+*Para configurar el dispositivo desde chrome se pega esto en la linea de navegación.
+chrome://inspect/#devices
+* Cada vez que se genere algun cambio
+> ionic capacitor copy android
+
+
+* CARGAR PAGINA DE inicio
+* generar token en la entrada de login                [OK]
+* Router guards para proteger la entrada por token    [OK]
+* Crear Menu con boton de cerrar session              [OK]
+* menu con button hamburge                            [OK]
+* Pagina para mostrar detalles de asistencia          [  ]
