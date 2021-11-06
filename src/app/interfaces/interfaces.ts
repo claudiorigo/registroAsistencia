@@ -8,6 +8,7 @@ export interface Usuarios{
 
   id: number;
   nombre: string;
+  avatar: string;
   email: string;
   telefono: string;
   password: string;
@@ -20,6 +21,7 @@ export interface Usuarios{
 export interface Asitencias  {
   id: number;
   nombre: string;
+  avatar: string;
   email: string;
   password: string;
   horario: string;

@@ -18,7 +18,7 @@ export class AlertService {
 
     const alert = await this.alertController.create({
       message,
-      buttons: ['OK']
+      buttons: ['Aceptar']
     });
     await alert.present();
   };

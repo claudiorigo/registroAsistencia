@@ -6,7 +6,7 @@
     </ion-buttons>
 
     <ion-title>
-      Registro Asistencia
+      Registro Asistencia {{name}}
     </ion-title>
 
   </ion-toolbar>
@@ -24,7 +24,8 @@
         color="primary">
       </ion-icon>
       <ion-label>
-        <h2>{{registro.text}}</h2>
+        <h1>{{nombre}}<h3>{{email}}</h3></h1>
+        <h6>{{registro.text}}</h6>
         <p>{{ registro.created | date: 'medium'}}</p>
       </ion-label>
     </ion-item>

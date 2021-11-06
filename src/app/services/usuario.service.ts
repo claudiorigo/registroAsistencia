@@ -36,8 +36,6 @@ export class UsuarioService {
     });
   }
 
-
-
   getUser(userId):Observable<any>{
     return this.http.get(this.apiUrl + '/users/' + userId).pipe(
       retry(3)

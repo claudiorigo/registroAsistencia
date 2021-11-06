@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 import { Usuarios, Asitencias } from 'src/app/interfaces/interfaces';
 import { Registro } from 'src/app/models/registro.model';
@@ -15,10 +16,12 @@ export class Tab3Page {
   usuario: Usuarios[] = [];
   reg: Registro[] = [];
   token: string = null;
+  
 
   asistencias: Asitencias = {
     id: 0 ,
     nombre: "",
+    avatar: "",
     email: "",
     password: "",
     horario: "",
@@ -31,17 +34,15 @@ export class Tab3Page {
   email: string = "";
   fechaHora: Date = new Date;
   sede: string = "";
+  avatar: string = "";
+  
+  
 
 
-
-  constructor(private storage: Storage) {
+  constructor(private storage: Storage, private router: Router) {
     this.init();
     this.registrosNuevos();
-    this.registrosNuevos();
-
-
-
-
+    
   }
 
   async init(){
@@ -66,6 +67,7 @@ export class Tab3Page {
         this.asistencias = {
           id: user.id,
           nombre: user.nombre,
+          avatar: user.avatar,
           email: user.email,
           password: user.password,
           horario: user.horario,
@@ -77,6 +79,15 @@ export class Tab3Page {
         this.nombre =  this.asistencias.nombre;
         this.email =  this.asistencias.email;
         this.sede = this.asistencias.sede;
+        this.avatar = this.asistencias.avatar;
+
+        let navigationExtras: NavigationExtras = {
+          state: {nombre:  this.nombre, email: this.email}
+          
+        }
+
+        this.router.navigate(['menu/tabs/tab2'], navigationExtras);
+        
 
       }
 

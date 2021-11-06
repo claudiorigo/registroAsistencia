@@ -10,6 +10,7 @@ import { Asitencias } from 'src/app/interfaces/interfaces';
 export class ExploreContainerComponent implements OnInit {
   @Input() name: string;
   @Input() nombre: string;
+  @Input() avatar: string;
   @Input() email: string;
   @Input() fechaHora: Date;
   @Input() sede: string;

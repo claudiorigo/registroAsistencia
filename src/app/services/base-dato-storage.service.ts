@@ -15,6 +15,8 @@ export class BaseDatoStorageService {
 
   usuario: Usuarios[] = [];
   asistencias: Asitencias[] = [];
+  nombre: string = '';
+  email: string = '';
 
   guardados: Registro[] = [];
   private _storage: Storage | null = null;
@@ -66,14 +68,19 @@ export class BaseDatoStorageService {
     this._storage = storage;
 
     this.guardados = (await this.storage.get('registros')) || [];
+    this.nombre = (await this.storage.get("nomnre") || '');
+    this.email = (await this.storage.get("email") || '');
   }
 
   async guardarRegistro( format: string, text: string ){
 
     await this.cargarStorage();
     const nuevoRegistro = new Registro( format, text );
+    
+
     this.guardados.unshift( nuevoRegistro );
     this._storage.set('registros', this.guardados);
+
     this.abrirRegistro( nuevoRegistro );
     this.registroAsistencia();
   }
@@ -110,13 +117,11 @@ export class BaseDatoStorageService {
     this.asistencias = (await this.storage.get("asistencia")) || arrTemp[0];
 
 
-
-
-
     let idAsistencia =  Number(this.asistencias.slice(5,7));
     for(let i of this.usuario){
 
       if (idAsistencia === i.id) {
+        console.log(idAsistencia,i.id);
         this.valido = true;
         this.alertService.presentToast("Asistencia Registrada");
       }
