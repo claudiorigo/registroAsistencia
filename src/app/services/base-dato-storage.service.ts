@@ -39,7 +39,8 @@ export class BaseDatoStorageService {
     const storage = await this.storage.create();
     this._storage = storage;
     this.guardarUsuariosStorage();
-    this.usuario = (await this.storage.get("users")) || [];
+    this.usuario = (await this.storage.get("users")) || [];    
+    
 
   }
 

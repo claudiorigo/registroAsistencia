@@ -1,0 +1,45 @@
+#container {
+
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #5e5454;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  .my-custom-menu {
+    --width: 500px;
+  }
+  
+  .logo {
+    width: 40%;
+    margin: 20% 0 20% 0;
+  }
+  
+  .title {
+    margin-bottom: 30px;
+  }
+  
+  .title p {
+    margin-top: 0 !important;
+  }

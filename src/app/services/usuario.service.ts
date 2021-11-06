@@ -23,8 +23,13 @@ export class UsuarioService {
 
   //usuario: any;
 
+  
+
   constructor(private http: HttpClient) {
     this.getUserEmail();
+
+
+    
   }
 
 
